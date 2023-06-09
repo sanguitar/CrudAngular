@@ -1,0 +1,33 @@
+<div class="container my-5">
+
+<table class="table" *ngIf="clientes && clientes.length >0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>Salário</th>
+      <th>Departamento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.id }}</td>
+      <td style="width: 200px">{{ cliente.Nome }}</td>
+
+      <td>{{ cliente.email }}</td>
+      <td>{{ cliente.telefone }}</td>
+      <td>{{ cliente.salario }}</td>
+      <td>{{ cliente.departamento }}</td>
+    </tr>
+  </tbody>
+</table>
+<P *ngIf="!clientes || clientes.length <= 0">Cliente Vazio </P>
+
+
+</div>
+
+
+
+
